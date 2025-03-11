@@ -1,5 +1,7 @@
 import express from "express";
 import cors from "cors";
+import axios from "axios";
+import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -9,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("Hello World");
+  res.send("Hello World!");
 });
 
 app.post("/api/auth/google", async (req, res) => {
